@@ -1,0 +1,21 @@
+{    
+    "_id": "6905235c04698f5c88da7764",
+    "SchemaName": "button",
+    "SchemaResolution": "Range",
+    "SchemaDevice": "Kinect",
+    "SchemaMetric": "SingleJointAngle",
+    "BodyAngles": [
+        "R_Elbow_Flexion"
+    ],
+    "CalculationInfo": null,
+    "ReductionInfo": null,
+    "ConditionInfo": null,
+    "FloatBoundsInfo": {
+        "lowBounds": 30.0,
+        "highBounds": 100.0,
+        "reverse": true,
+        "useExtents": true
+    },
+    "Vector2BoundsInfo": null,
+    "Vector3BoundsInfo": null
+}
