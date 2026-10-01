@@ -31,10 +31,18 @@ cannot receive.
 ## Two-player preview (`multiplayer/`, 2026-10-01)
 
 `multiplayer/` is an early two-player test of Eleven Ball, built from
-eleven-ball `feature/multiplayer` 57365dd (EGDL facades from egdl2
-`feature/multiplayer` bb8647bd). A second fruit spawner drops balls for player
-two, and the pairing lobby takes one to two players. The site root stays the
-single-player game.
+eleven-ball `feature/multiplayer` 1ed3517 (portable DLLs from egdl_Core
+868c999, EGDL facades from egdl2 `feature/multiplayer` bb8647bd). A second
+fruit spawner drops balls for player two, and the pairing lobby takes one to
+two players. The site root stays the single-player game.
+
+Multiplayer UI (2026-10-01): the Players tab lists each player (joined, lost
+or waiting, their tracker and LAN or relay, their movement, Kick or Release);
+the Tracking tab has a P1 / P2 switch that picks each player's movement (P2's
+can be picked before P2 joins, or left as "Same as Player 1") and shows that
+player's live signals; the header reads "Players n/2"; in game the top bar has
+a chip per player, toasts say when a player joins, is lost, comes back or
+leaves, and the pause panel lists the players with their movements.
 
 In the browser every player comes in through the relay, and the relay
 deployed at `https://www.enablegames.xyz/` pairs one phone per game, so this
