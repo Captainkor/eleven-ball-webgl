@@ -27,3 +27,17 @@ Motion input streams from the enAble tracker over Socket.IO via the relay at
 restricts origins, so this site's origin must be on its allowlist. Without a
 portal sign-in the game listens for OSC on the local port, which the browser
 cannot receive.
+
+## Two-player preview (`multiplayer/`, 2026-10-01)
+
+`multiplayer/` is an early two-player test of Eleven Ball, built from
+eleven-ball `feature/multiplayer` 57365dd (EGDL facades from egdl2
+`feature/multiplayer` bb8647bd). A second fruit spawner drops balls for player
+two, and the pairing lobby takes one to two players. The site root stays the
+single-player game.
+
+In the browser every player comes in through the relay, and the relay
+deployed at `https://www.enablegames.xyz/` pairs one phone per game, so this
+preview takes one player for now. Once enableportal `feature/multiplayer-relay`
+is deployed, the same build takes a second phone. Two players today need the
+desktop build with the EnAble Launcher.
