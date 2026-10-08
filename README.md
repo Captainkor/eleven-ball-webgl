@@ -7,6 +7,13 @@ Published build only; no source. Built from the `eleven-ball` Unity project
 - Gzip compression with Unity's JS decompression fallback, so it loads from a
   static host that cannot set `Content-Encoding` headers (GitHub Pages)
 - `.nojekyll` disables Jekyll processing
+- `multiplayer/Build/` names its files after the build's eleven-ball commit
+  (`WebGL-Multiplayer-<commit>.*`, and `index.html` points at them). GitHub
+  Pages lets browsers cache files for ten minutes, and with fixed names a
+  browser that had the previous build could run new code against old data,
+  which crashes at start-up ("indirect call to null"). A new build is new
+  URLs, so nothing mixes; keep the previous build's files for one more
+  publish so a browser still holding the old `index.html` finds them.
 
 ## UI (2026-09-04)
 
