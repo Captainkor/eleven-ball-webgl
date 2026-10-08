@@ -31,9 +31,12 @@ cannot receive.
 ## Two-player preview (`multiplayer/`, 2026-10-01)
 
 `multiplayer/` is an early two-player test of Eleven Ball, built from
-eleven-ball `feature/multiplayer` 51d791c (portable DLLs from egdl_Core
-9ab6ba1, EGDL facades from egdl2 `feature/multiplayer` 8a31221d, multiplayer
-through the optional multiplayer module's MultiplayerManager). A second fruit
+eleven-ball `feature/multiplayer` 1a5a423 (portable DLLs from egdl_Core
+9ab6ba1, EGDL facades from egdl2 `feature/multiplayer` 3b4b58bf, multiplayer
+through the optional multiplayer module's MultiplayerManager; since 2026-10-08
+the game's host takes the relay socket whenever the portal sign-in makes it,
+so the browser build announces two players to a launcher or phone paired
+through the relay and reads their frames). A second fruit
 spawner drops balls for player two, and the pairing lobby takes one to two
 players. The site root stays the single-player game.
 
