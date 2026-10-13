@@ -37,15 +37,25 @@ cannot receive.
 
 ## Two-player preview (`multiplayer/`, 2026-10-01)
 
-`multiplayer/` is an early two-player test of Eleven Ball, built from
-eleven-ball `feature/multiplayer` 1a5a423 (portable DLLs from egdl_Core
-9ab6ba1, EGDL facades from egdl2 `feature/multiplayer` 3b4b58bf, multiplayer
+`multiplayer/` is the two-player preview of Eleven Ball, built from
+eleven-ball `feature/multiplayer` 68ea948 (portable DLLs from egdl_Core
+13aabd9, EGDL facades from egdl2 `feature/multiplayer` e090dbdb, multiplayer
 through the optional multiplayer module's MultiplayerManager; since 2026-10-08
 the game's host takes the relay socket whenever the portal sign-in makes it,
 so the browser build announces two players to a launcher or phone paired
-through the relay and reads their frames). A second fruit
-spawner drops balls for player two, and the pairing lobby takes one to two
-players. The site root stays the single-player game.
+through the relay and reads their frames). The pairing lobby takes one to
+two players. The site root stays the single-player game.
+
+Modes (2026-10-12, MULTIPLAYER-ELEVENBALL-SPEC.md in egdl_Core): with two
+players in, Home's Mode row picks **Co-op** (both drop into one shared jar
+for a team score; a merge of balls dropped by different players earns a
+teamwork bonus of half its points, rounded up) or **Versus** (a jar each,
+side by side, the same seeded balls for everyone, a timed round, 180 s by
+default, then ranked results). One player plays Solo, today's game. Each
+player's card on the Players tab sets their assist (0 Off, 1 Guide: a ghost
+of where the ball lands, 2 Small balls, 3 Slow fall: half gravity and an aim
+magnet). High scores keep a list per mode. Built for four players, shipped
+with two.
 
 Multiplayer UI (2026-10-01): the Players tab lists each player (joined, lost
 or waiting, their tracker and LAN or relay, their movement, Kick or Release);

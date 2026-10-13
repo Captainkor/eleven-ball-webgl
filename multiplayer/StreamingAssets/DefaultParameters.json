@@ -152,7 +152,43 @@
                 "$type": "StringListParameter",
                 "$id": "35"
             }
-	]
+	],
+        "Multiplayer": [
+            {
+                "strings": [
+                    "Co-op",
+                    "Versus"
+                ],
+                "value_": "Co-op",
+                "name": "Multiplayer Mode",
+                "alias": "Multiplayer Mode",
+                "description": "How two or more players play: Co-op (one shared jar, a team score) or Versus (a jar each, a timed round, a winner). The Home page can change it for a game.",
+                "$type": "StringListParameter",
+                "$id": "40"
+            },
+            {
+                "min_": 60.0,
+                "max_": 900.0,
+                "value_": 180.0,
+                "tick_": 10.0,
+                "name": "Versus Round Length",
+                "alias": "Versus Round Length",
+                "description": "The number of seconds a Versus round lasts.",
+                "$type": "RangeParameter",
+                "$id": "41"
+            },
+            {
+                "min_": 0.0,
+                "max_": 3.0,
+                "value_": 0.0,
+                "tick_": 1.0,
+                "name": "Assist Level",
+                "alias": "Assist Level",
+                "description": "0 off, 1 an aim guide, 2 only the three smallest balls as well, 3 a slower fall and an aim magnet as well. The game's own player plays at this level; a player signed in to their own account plays at their account's.",
+                "$type": "RangeParameter",
+                "$id": "42"
+            }
+        ]
     },
     "parameters": {
         "Suki type": {
@@ -190,6 +226,15 @@
     	},
     	"Ball Style": {
     	    "$ref": "35"
-    	}
+    	},
+        "Multiplayer Mode": {
+            "$ref": "40"
+        },
+        "Versus Round Length": {
+            "$ref": "41"
+        },
+        "Assist Level": {
+            "$ref": "42"
+        }
     }
 }
