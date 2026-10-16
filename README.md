@@ -38,13 +38,20 @@ cannot receive.
 ## Two-player preview (`multiplayer/`, 2026-10-01)
 
 `multiplayer/` is the two-player preview of Eleven Ball, built from
-eleven-ball `feature/multiplayer` 68ea948 (portable DLLs from egdl_Core
-13aabd9, EGDL facades from egdl2 `feature/multiplayer` e090dbdb, multiplayer
+eleven-ball `HandDemo` 2757284 (portable DLLs from egdl_Core
+13aabd9 with Enablegames.Network from c7c68ca, EGDL facades from egdl2 d88538ad, multiplayer
 through the optional multiplayer module's MultiplayerManager; since 2026-10-08
 the game's host takes the relay socket whenever the portal sign-in makes it,
 so the browser build announces two players to a launcher or phone paired
 through the relay and reads their frames). The pairing lobby takes one to
 two players. The site root stays the single-player game.
+
+Player 1 comes back (2026-10-16): with one phone tracking both players, a
+Player 1 who walked out of view could not join back (their slot kept a
+phone's hold for good); now they are held like any camera player, and while
+Player 1 is lost the next to join, a raised hand or a new phone, is Player 1
+again. The launcher's string settings step with a short slide, and their
+arrows sit centred.
 
 Modes (2026-10-12, MULTIPLAYER-ELEVENBALL-SPEC.md in egdl_Core): with two
 players in, Home's Mode row picks **Co-op** (both drop into one shared jar
